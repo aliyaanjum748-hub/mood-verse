@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodVerse — Discover Your Vibe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌈 MoodVerse</h1>
+    <p>Your mood. Your world. Your vibe.</p>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2>How are you feeling today?</h2>
+        <p>Select your current mood and watch your world change!</p>
+
+        <div class="moods">
+            <button onclick="selectMood('Happy')">😊 Happy</button>
+            <button onclick="selectMood('Sad')">😢 Sad</button>
+            <button onclick="selectMood('Angry')">😡 Angry</button>
+            <button onclick="selectMood('Calm')">😌 Calm</button>
+            <button onclick="selectMood('Excited')">🤩 Excited</button>
+            <button onclick="selectMood('Anxious')">😰 Anxious</button>
+            <button onclick="selectMood('Loved')">🥰 Loved</button>
+            <button onclick="selectMood('Tired')">😴 Tired</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2 id="moodTitle">Your MoodVerse</h2>
+        <p id="quote">Choose a mood to discover your vibe!</p>
+
+        <h3>✨ Recommended Activity</h3>
+        <p id="activity">Your personalized activity will appear here.</p>
+
+        <button onclick="surpriseMe()">🎲 Surprise Me</button>
+        <button onclick="copyQuote()">📋 Copy Quote</button>
+    </section>
+
+    <section class="card">
+        <h2>🎵 Music for Your Mood</h2>
+        <a id="musicLink" href="https://www.youtube.com/" target="_blank"
+           rel="noopener noreferrer">Explore Music</a>
+    </section>
+
+    <section class="card">
+        <h2>🔐 Your Account</h2>
+
+        <input type="email" id="email" placeholder="Email address">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="registerUser()">Register</button>
+        <button onclick="loginUser()">Login</button>
+        <button onclick="logoutUser()">Logout</button>
+
+        <p id="authMessage"></p>
+    </section>
+
+    <section class="card">
+        <h2>📝 Save Your Mood</h2>
+
+        <label for="intensity">Mood intensity (1–10)</label>
+        <input type="number" id="intensity" min="1" max="10" value="5">
+
+        <textarea id="note" placeholder="Write about your day..."></textarea>
+
+        <button onclick="saveMood()">Save Mood</button>
+        <button onclick="loadHistory()">View Mood History</button>
+
+        <div id="history"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Made with 💜 by the MoodVerse Team</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
